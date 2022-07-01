@@ -1,0 +1,11 @@
+  <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item>
+        <i nz-icon nzType="table"></i>
+        <span>nav 1</span>
+      </li>
+      <li nz-menu-item>
+        <i nz-icon nzType="home"></i>
+        <span>nav 2</span>
+      </li>
+
+    </ul>

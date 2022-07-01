@@ -1,0 +1,25 @@
+
+<nz-layout class="layout" >
+
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+    <div class="logo"></div>
+  
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <i
+        class="trigger"
+        nz-icon
+        [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+        (click)="isCollapsed = !isCollapsed"
+      ></i>
+    </nz-header>
+    <br>
+    <nz-content>
+      <div class="inner-content"> <app-car-table></app-car-table></div>
+    </nz-content>
+    <nz-footer></nz-footer>
+
+  </nz-layout>
+
+</nz-layout>

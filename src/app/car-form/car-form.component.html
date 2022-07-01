@@ -1,0 +1,37 @@
+<nz-modal [(nzVisible)]="isVisible" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+<form *nzModalContent
+  nz-form
+  [nzLayout]="validateForm.get('formLayout')?.value"
+  [formGroup]="validateForm"
+  (ngSubmit)="submitForm()"
+>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="isHorizontal ? 4 : null">Insert Car</nz-form-label>
+    <nz-form-control [nzSpan]="isHorizontal ? 14 : null">
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="isHorizontal ? 4 : null">Name</nz-form-label>
+    <nz-form-control [nzSpan]="isHorizontal ? 14 : null" nzErrorTip="Please input name of car!">
+      <input  type="text" formControlName="name" placeholder="input name of car" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="isHorizontal ? 4 : null">Model</nz-form-label>
+    <nz-form-control [nzSpan]="isHorizontal ? 14 : null" nzErrorTip="Please input model of car!">
+      <input type="text" nz-input formControlName="model" placeholder="input model of car" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="isHorizontal ? 4 : null">Number</nz-form-label>
+    <nz-form-control [nzSpan]="isHorizontal ? 14 : null" nzErrorTip="Please input number of car!">
+      <input  nz-input formControlName="number" placeholder="input number of car" />
+    </nz-form-control>
+  </nz-form-item>
+
+
+</form>
+</nz-modal>
